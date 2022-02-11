@@ -1,0 +1,13 @@
+name = "DCELs"
+uuid = "8c28c835-e81c-4ea4-8d5c-7c9dbbfe5d06"
+authors = ["Rodolfo Figueroa Soriano <4rodolfofigueroa2@gmail.com>"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
