@@ -9,6 +9,7 @@ ResumableFunctions = "c5292f4c-5179-55e1-98c5-05642aab7184"
 UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
 
 [compat]
+RecipesBase = "1"
 ResumableFunctions = "0.6"
 julia = "1"
 
