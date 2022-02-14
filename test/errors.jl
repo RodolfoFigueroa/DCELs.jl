@@ -1,0 +1,3 @@
+@testset "GeometryError" begin
+
+end

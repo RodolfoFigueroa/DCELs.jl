@@ -180,11 +180,11 @@ function Base.show(io::IO, edge::Edge)
     print(io,
     """
     ID: $(edge.id)
-    Next: $(edge.next === nothing ? nothing : edge.next.id)
-    Prev: $(edge.prev === nothing ? nothing : edge.prev.id)
-    Twin: $(edge.twin === nothing ? nothing : edge.twin.id)
-    Dest: $(edge.dest === nothing ? nothing : edge.dest.id)
-    Face: $(edge.face === nothing ? nothing : edge.face.id)
+    Next: $(edge.next === nothing ? "nothing" : edge.next.id)
+    Prev: $(edge.prev === nothing ? "nothing" : edge.prev.id)
+    Twin: $(edge.twin === nothing ? "nothing" : edge.twin.id)
+    Dest: $(edge.dest === nothing ? "nothing" : edge.dest.id)
+    Face: $(edge.face === nothing ? "nothing" : edge.face.id)
     """
     )
 end
@@ -194,7 +194,7 @@ function Base.show(io::IO, vertex::Vertex)
     """
     ID: $(vertex.id)
     Coords: ($(vertex.x), $(vertex.y))
-    Edge: $(vertex.edge === nothing ? nothing : vertex.edge.id)
+    Edge: $(vertex.edge === nothing ? "nothing" : vertex.edge.id)
     """
     )
 end
@@ -203,7 +203,7 @@ function Base.show(io::IO, face::Face)
     print(io,
     """
     ID: $(face.id)
-    Edge: $(face.edge === nothing ? nothing : face.edge.id)
+    Edge: $(face.edge === nothing ? "nothing" : face.edge.id)
     """
     )
 end
