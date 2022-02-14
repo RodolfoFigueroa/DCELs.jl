@@ -13,8 +13,8 @@ end
     @test occursin("ID: $(e.id)\n", er)
     @test occursin("Next: $(e.next === nothing ? "nothing" : e.next.id)\n", er)
     @test occursin("Prev: $(e.prev === nothing ? "nothing" : e.prev.id)\n", er)
-    @test occursin("Twin: $(e.twin.id)\n", er)
-    @test occursin("Dest: $(e.dest.id)\n", er)
+    @test occursin("Twin: $(e.twin === nothing ? "nothing" : e.twin.id)\n", er)
+    @test occursin("Dest: $(e.dest === nothing ? "nothing" : e.dest.id)\n", er)
     @test occursin("Face: $(e.face === nothing ? "nothing" : e.face.id)\n", er)
 end
 
