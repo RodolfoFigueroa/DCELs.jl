@@ -1,3 +1,6 @@
+*.cov
+lcov.info
+cov_test.jl
 *.jl.*.cov
 *.jl.cov
 *.jl.mem

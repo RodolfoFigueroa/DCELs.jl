@@ -1,6 +1,7 @@
 using DCELs
 using Test
 
-@testset "DCELs.jl" begin
-    # Write your tests here.
+@testset "Unit tests" begin
+    include("geometry.jl")
+    include("printing.jl")
 end

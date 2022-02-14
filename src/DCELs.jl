@@ -5,6 +5,7 @@ using ResumableFunctions
 using UUIDs
 
 export AbstractGeometry, AbstractVertex, AbstractEdge, AbstractFace, AbstractTessellation
+export GeometryError
 export Vertex, Edge, Face, Tessellation
 export edge_path, edge_loop
 export vertices, edges, faces
@@ -227,7 +228,7 @@ function Base.showerror(io::IO, e::GeometryError)
 end
 
 
-#= Algebra =#
+#= Arithmetic =#
 Base.:+(a::T, b::T) where {T <: AbstractVertex} = T(a.x+b.x, a.y+b.y)
 Base.:-(a::T, b::T) where {T <: AbstractVertex} = T(a.x-b.x, a.y-b.y)
 
