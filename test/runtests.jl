@@ -6,6 +6,7 @@ using Test
     include("errors.jl")
     include("geometry.jl")
     include("iterators.jl")
+    include("operations.jl")
     include("printing.jl")
     include("sorting.jl")
     include("squeezing.jl")

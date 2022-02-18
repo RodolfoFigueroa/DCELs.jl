@@ -731,8 +731,6 @@ end
     return [vertex.x], [vertex.y]
 end
 
-
-
 @recipe function f(
     vertices::AbstractVector{<:AbstractVertex};
     vertex_labels=false,
