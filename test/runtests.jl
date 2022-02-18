@@ -2,9 +2,11 @@ using DCELs
 using Test
 
 @testset "Unit tests" begin
-    include("geometry.jl")
-    include("printing.jl")
+    include("connecting.jl")
     include("errors.jl")
+    include("geometry.jl")
     include("iterators.jl")
-    include("connectivity.jl")
+    include("printing.jl")
+    include("sorting.jl")
+    include("squeezing.jl")
 end

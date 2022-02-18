@@ -4,5 +4,6 @@ end
 
 @testset "Printing" begin
     e = GeometryError("Test message")
-    @test sprint(showerror, e) == "GeometryError\nTest message\n"
+    er = sprint(showerror, e)
+    @test occursin("GeometryError\nTest message\n", er)
 end

@@ -414,6 +414,12 @@ function _is_sorted_ccw(a::AbstractVertex, b::AbstractVertex, c::AbstractVertex,
     return (ang_a <= ang_b <= ang_c) || (ang_b <= ang_c <= ang_a) || (ang_c <= ang_a <= ang_b)
 end
 
+"""
+    squeeze_edge(vertex::AbstractVertex, edge::AbstractEdge)
+
+Returns an edge `h` such that `h.dest = vertex`, and if you rotate `edge` counterclockwise
+around `vertex`, the first edge you'll meet is `h`.
+"""
 function squeeze_edge(vertex::AbstractVertex, edge::AbstractEdge)
     if vertex.edge === nothing
         return edge
@@ -427,7 +433,9 @@ function squeeze_edge(vertex::AbstractVertex, edge::AbstractEdge)
     end
 
     e1, e2 = res1[1], res2[1]
-    v1, v2, u = e1.twin.dest, e2.twin.dest, edge.twin.dest
+    v1 = e1.twin.dest
+    v2 = e2.twin.dest
+    u = edge.twin.dest
 
     while !_is_sorted_ccw(v1, u, v2, vertex)
         res2 = iterate(iter)
