@@ -61,10 +61,8 @@ Edge between two vertices.
 
 # Fields
 - `id::String`: Unique ID.
-- `next`::Union{Edge, Nothing}`: Next edge alongside the corresponding face
-(counterclockwise).
-- `prev`::Union{Edge, Nothing}`: Previous edge alongside the corresponding face
-(counterclockwise).
+- `next`::Union{Edge, Nothing}`: Next edge alongside the corresponding face (counterclockwise).
+- `prev`::Union{Edge, Nothing}`: Previous edge alongside the corresponding face (counterclockwise).
 - `twin`::Union{Edge, Nothing}`: Twin edge.
 - `prev`: Vertex that the edge points to.
 - `face`: Face bounded by the edge.
@@ -263,8 +261,8 @@ end
 @doc """
     edge_loop(start::AbstractEdge; reverse::Bool=false)
 
-Yield all edges in the list `[start, start.next, start.next.next, ..., start.prev]. If
-`reverse=true`, this will instead be `[start, start.prev, ..., start.next]`.
+Yield all edges in the list `[start, start.next, start.next.next, ..., start.prev]`. If
+`reverse=true`, this will instead yield `[start, start.prev, ..., start.next]`.
 """
 edge_loop(start::AbstractEdge; reverse::Bool=false)
 
@@ -564,8 +562,7 @@ Connect two vertices.
 - `v::AbstractVertex`: Second vertex to connect.
 
 # Keywords
-- `split::Union{Bool, Nothing}=nothing`: Whether connecting `u` and `v` will create a new
-face. If `nothing`, it will be determined automatically, at the cost of more operations.
+- `split::Union{Bool, Nothing}=nothing`: Whether connecting `u` and `v` will create a new face. If `nothing`, it will be determined automatically, at the cost of more operations.
 
 # Returns
 - `h`: The newly created edge from `u` to `v`.`

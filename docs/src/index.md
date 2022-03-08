@@ -2,9 +2,22 @@
 CurrentModule = DCELs
 ```
 
-# DCELs
+# DCELs.jl
 
-Documentation for [DCELs](https://github.com/RodolfoFigueroa/DCELs.jl).
+*Doubly connected edge lists in Julia.*
+
+# Overview
+
+# Installation
+
+Getting the latest stable release is easy with Julia's integrated package manager:
+
+```
+] add DCELs
+```
+
+# Quick start
+
 
 ```@index
 ```
